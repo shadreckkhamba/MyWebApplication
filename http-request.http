@@ -1,0 +1,22 @@
+###
+POST http://localhost:8080/api/v1/applications
+application-type: application/json
+{
+"name": "Immo"
+"category": "social"
+"developer": "unknown"
+}
+
+<> 2022-01-15T214414.400.html
+
+###
+POST http://localhost:8080/api/v1/applications
+application-type: application/json
+{ "name": "Immo",
+  "category": "Social",
+   "developer":"Shadreck"
+}
+
+<> 2022-01-15T045937.400.html
+
+###
