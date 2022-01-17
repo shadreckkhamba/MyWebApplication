@@ -13,6 +13,14 @@ public class ApplicationController {
     public ApplicationController(ApplicationService applicationService) {
         this.applicationService = applicationService;
     }
+    @RequestMapping (value="/applications", method = RequestMethod.POST)
+    public MyWebApplication createApp(@RequestBody MyWebApplication myWebApplication){
+        MyWebApplication object = new MyWebApplication();
+        object.setName(myWebApplication.getName());
+        object.setCategory(myWebApplication.getCategory());
+        object.setDeveloper(myWebApplication.getDeveloper());
+        return object;
+    }
 
     @GetMapping
     public List<MyWebApplication> getApplications(){

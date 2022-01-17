@@ -22,7 +22,7 @@ public class ApplicationService<myWebApplication> { final private ApplicationRep
         Optional<MyWebApplication> myWebApplicationOptional = applicationRepository
                 .findMyWebApplicationByName(myWebApplication.getName());
     if(myWebApplicationOptional.isPresent()){
-        throw new IllegalStateException("Application is available for download");
+        throw new IllegalStateException("Application is not available for download");
     }else
         throw new IllegalStateException("Application package not available on this website");
     }

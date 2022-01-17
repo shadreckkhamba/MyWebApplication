@@ -58,12 +58,16 @@ public class MyWebApplication {
         return category;
     }
 
-    public void setRelease(String category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
     public String getDeveloper() {
         return developer;
+    }
+    public void setDeveloper(String developer) {
+
+        this.developer=developer;
     }
     public String getEmail() {
         return email;
@@ -83,4 +87,5 @@ public class MyWebApplication {
                 ", developer='" + developer + '\'' +
                    ",email=" +email+'}';
     }
+
 }
