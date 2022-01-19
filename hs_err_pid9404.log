@@ -1,0 +1,196 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes for Failed to commit area from 0x00000000d1200000 to 0x00000000d9200000 of length 134217728.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3619), pid=9404, tid=8464
+#
+# JRE version:  (11.0.13+7) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.13+7-b1751.21, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.rmi.server.hostname=127.0.0.1 -Duser.timezone=UTC -Xmx750m -Xms128m -Dfile.encoding=UTF-8 com.intellij.database.remote.RemoteJdbcServer org.postgresql.Driver
+
+Host: Intel(R) Celeron(R) CPU B820 @ 1.70GHz, 2 cores, 5G,  Windows 11 , 64 bit Build 22454 (10.0.22454.1000)
+Time: Sun Jan 16 18:19:37 2022 Pacific Standard Time elapsed time: 0.104346 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001889bdc2800):  JavaThread "Unknown thread" [_thread_in_vm, id=8464, stack(0x0000004095500000,0x0000004095600000)]
+
+Stack: [0x0000004095500000,0x0000004095600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x613daa]
+V  [jvm.dll+0x799b30]
+V  [jvm.dll+0x79b14d]
+V  [jvm.dll+0x79b823]
+V  [jvm.dll+0x24c958]
+V  [jvm.dll+0x610e24]
+V  [jvm.dll+0x605b25]
+V  [jvm.dll+0x30aaab]
+V  [jvm.dll+0x30aa1a]
+V  [jvm.dll+0x30a8f2]
+V  [jvm.dll+0x30f856]
+V  [jvm.dll+0x359143]
+V  [jvm.dll+0x359846]
+V  [jvm.dll+0x359243]
+V  [jvm.dll+0x2e57a8]
+V  [jvm.dll+0x2e6947]
+V  [jvm.dll+0x776d47]
+V  [jvm.dll+0x77853c]
+V  [jvm.dll+0x3666c9]
+V  [jvm.dll+0x75a9ce]
+V  [jvm.dll+0x3d47d3]
+V  [jvm.dll+0x3d6d21]
+C  [jli.dll+0x536b]
+C  [ucrtbase.dll+0x292fc]
+C  [KERNEL32.DLL+0x16d50]
+C  [ntdll.dll+0x4c6b]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000018899c121a0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001889bdda000 GCTaskThread "GC Thread#0" [stack: 0x0000004095600000,0x0000004095700000] [id=8468]
+  0x000001889bdf2000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000004095700000,0x0000004095800000] [id=10508]
+  0x000001889bdf3800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000004095800000,0x0000004095900000] [id=1372]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdb8135c97]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000001889bdbfac0] Heap_lock - owner thread: 0x000001889bdc2800
+
+Heap address: 0x00000000d1200000, size: 750 MB, Compressed Oops mode: Non-zero based: 0x00000000d1200000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.027 Loaded shared library C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff6ffca0000 - 0x00007ff6ffcaa000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\java.exe
+0x00007ffdece00000 - 0x00007ffded00e000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffdecd00000 - 0x00007ffdecdbd000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffdea370000 - 0x00007ffdea6f3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffdea7a0000 - 0x00007ffdea8b1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffde61e0000 - 0x00007ffde61f9000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\jli.dll
+0x00007ffde61c0000 - 0x00007ffde61d7000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\VCRUNTIME140.dll
+0x00007ffdeb340000 - 0x00007ffdeb4eb000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffdd8730000 - 0x00007ffdd89d2000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22454.1000_none_246f0f3ec589a054\COMCTL32.dll
+0x00007ffdea340000 - 0x00007ffdea366000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffdeb750000 - 0x00007ffdeb7f4000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffdead40000 - 0x00007ffdead69000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffdea8c0000 - 0x00007ffdea9d7000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffdea700000 - 0x00007ffdea79b000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffdec830000 - 0x00007ffdec861000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffdd7f80000 - 0x00007ffdd801d000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\msvcp140.dll
+0x00007ffdb7e40000 - 0x00007ffdb89b6000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\server\jvm.dll
+0x00007ffdeac90000 - 0x00007ffdead3f000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffdec720000 - 0x00007ffdec7bf000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffdebc10000 - 0x00007ffdebd30000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffdecc90000 - 0x00007ffdecc98000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffdd56b0000 - 0x00007ffdd56b9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffdebef0000 - 0x00007ffdebf61000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffde3b20000 - 0x00007ffde3b53000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffde6200000 - 0x00007ffde620a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffde93c0000 - 0x00007ffde93d8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffdc19e0000 - 0x00007ffdc19f1000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\verify.dll
+0x00007ffdd7ad0000 - 0x00007ffdd7cf7000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffdeb890000 - 0x00007ffdebc0b000 	C:\WINDOWS\System32\combase.dll
+0x00007ffdd7a90000 - 0x00007ffdd7ac1000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffdeab40000 - 0x00007ffdeabc1000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffdb7e10000 - 0x00007ffdb7e39000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\java.dll
+0x00007ffdc56e0000 - 0x00007ffdc56eb000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\jimage.dll
+0x00007ffdb7df0000 - 0x00007ffdb7e08000 	C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22454.1000_none_246f0f3ec589a054;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\jbr\bin\server
+
+VM Arguments:
+jvm_args: -Djava.rmi.server.hostname=127.0.0.1 -Duser.timezone=UTC -Xmx750m -Xms128m -Dfile.encoding=UTF-8 
+java_command: com.intellij.database.remote.RemoteJdbcServer org.postgresql.Driver
+java_class_path (initial): C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\lib\util.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\lib\org_codehaus_groovy_groovy.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\plugins\DatabaseTools\lib\jdbc-console.jar;C:\Users\SHADRECK\AppData\Roaming\JetBrains\IntelliJIdea2021.3\jdbc-drivers\PostgreSQL\42.2.22\postgresql-42.2.22.jar;C:\Users\SHADRECK\AppData\Roaming\JetBrains\IntelliJIdea2021.3\jdbc-drivers\PostgreSQL\42.2.22\jna-platform-win-4.4.0.jar;C:\Users\SHADRECK\AppData\Roaming\JetBrains\IntelliJIdea2021.3\jdbc-drivers\PostgreSQL\42.2.22\jna-win-4.4.0.jar;C:\Users\SHADRECK\AppData\Roaming\JetBrains\IntelliJIdea2021.3\jdbc-drivers\PostgreSQL\42.2.22\waffle-jna-win-1.8.1.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 786432000                                 {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5825164                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916538                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916538                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Polyspace\R2021a\bin;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-11.0.13\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jre7\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;
+USERNAME=SHADRECK
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22454 (10.0.22454.1000)
+OS uptime: 0 days 2:22 hours
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 42 stepping 7 microcode 0x2f, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, clmul, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 5843M (1486M free)
+TotalPageFile size 6355M (AvailPageFile size 57M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 47M, peak: 175M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.13+7-b1751.21) for windows-amd64 JRE (11.0.13+7-b1751.21), built on Nov 30 2021 02:32:50 by "" with MS VC++ 14.0 (VS2015)
+
+END.
