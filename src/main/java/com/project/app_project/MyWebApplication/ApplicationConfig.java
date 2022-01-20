@@ -1,4 +1,4 @@
-package com.example.demo.MyWebApplication;
+package com.project.app_project.MyWebApplication;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;

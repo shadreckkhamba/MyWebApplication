@@ -45,7 +45,20 @@
             <version>0.2.5</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-boot-starter</artifactId>-->
+<!--			<version>3.0.0</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>io.springfox</groupId>-->
+<!--			<artifactId>springfox-swagger2</artifactId>-->
+<!--			<version>2.9.2</version>-->
+<!--		</dependency>-->
+
+
+		<dependency>
             <groupId>org.cqfn.save</groupId>
             <artifactId>save-common</artifactId>
             <version>0.2.5</version>
