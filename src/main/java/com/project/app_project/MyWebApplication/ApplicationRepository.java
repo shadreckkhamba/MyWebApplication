@@ -1,4 +1,4 @@
-package com.example.demo.MyWebApplication;
+package com.project.app_project.MyWebApplication;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -17,8 +17,4 @@ public interface ApplicationRepository
 
  // Optional<Object> findByName(String myWebApplicationName);
 public List<MyWebApplication> findByName(String name);
-
-
-
-
 }

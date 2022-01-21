@@ -1,4 +1,4 @@
-package com.example.demo.MyWebApplication;
+package com.project.app_project.MyWebApplication;
 
 import javax.persistence.*;
 @Entity
@@ -20,7 +20,7 @@ public class MyWebApplication {
     private String developer;
     private String email;
 
-    public MyWebApplication() {
+    public MyWebApplication(){
     }
 
     public MyWebApplication(Long id, String name, String category, String developer, String email) {
